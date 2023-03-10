@@ -1,15 +1,21 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Home from "./home/Home";
 import About from "./about/About";
-import Header from "./common/Header"
+import Header from "./common/Header";
+import PageNotFound from "./PageNotFound";
+import CoursesPage from "./courses/CoursesPage";
 
 function App() {
   return (
     <div className="container-fluid">
-      <Header/>
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/courses" component={CoursesPage} />
+        <Route component={PageNotFound} />
+      </Switch>
     </div>
   );
 }
