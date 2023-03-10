@@ -8,16 +8,6 @@ const Home = () => (
     <Link to="about" className="btn btn-primary btn-lrg">
       Learn more
     </Link>
-
-    <div className="col-md-12">
-      <div className="col-md-6">
-        <p>Hello 1</p>
-      </div>
-
-      <div className="col-md-6">
-        <p>Hello 2</p>
-      </div>
-    </div>
   </div>
 );
 
